@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
  <head>
+<link rel="stylesheet" href="main.css">
  <title>To-Do List App</title>
- <link rel="stylesheet" href="main.css">
- <script>
-  function addItem() {
-   var newItem = document.createElement("div");
-   newItem.innerHTML = document.getElementById("box").value;
-   newItem.onclick = removeItem;
-   document.getElementById("list").appendChild(newItem);
-   saveList();
-  }
-  function removeItem() {
-   document.getElementById("list").removeChild(this);
-   saveList();
-  }
-  
- </script>
 
 </head>
 <body>
- 
- <div class="button">
-  <!-- <p style="font-size:18px; font-style:bold;"> To-Do List</p> -->
-  <input type="text" id="box" value=""/>
-  <br/>
-  <input type="button" value="Add item" onclick="addItem();"/>
-  <br/>
-   <div id="list"></div>
- </div>
+  <div id="myDIV" class="header">
+    <h2>My To Do List</h2>
+    <input type="text" id="myInput" placeholder="Title...">
+    <span onclick="newElement()" class="add">Add</span>
+  </div>
+  
+  <ul id="hero">
+    <li>Wake up</li>
+    <li class="checked">Take tea</li>
+    <li>Work on my projects</li>
+    <li>Take a short break</li>
+    <li>Read a book</li>
+    <li>Review my work </li>
+    <li>Plan my task for the next day</li>
+  </ul>
 
+
+<script src="main.js">
+
+ </script>
+ 
 </body>
 </html>
